@@ -7,3 +7,99 @@ services:
     ports:
       # <Host Port>:<Container Port>
       - "3001:3001"
+    networks:
+      - testapp
+
+  api1:
+    container_name: api1
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+    build:
+      context: ./examples/api1/
+      dockerfile: ./Dockerfile
+    ports:
+      - '3331:3331'
+    volumes:
+      - ./examples/api1:/usr/src/app/
+    networks:
+      - testapp
+
+
+  api2:
+    container_name: api2
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+    build:
+      context: ./examples/api2/
+      dockerfile: ./Dockerfile
+    ports:
+      - '3332:3332'
+    volumes:
+      - ./examples/api2:/usr/src/app/
+    networks:
+      - testapp
+
+
+  api3:
+    container_name: api3
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+    build:
+      context: ./examples/api3/
+      dockerfile: ./Dockerfile
+    ports:
+      - '3333:3333'
+    volumes:
+      - ./examples/api3:/usr/src/app/
+    networks:
+      - testapp
+
+
+  api4:
+    container_name: api4
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+    build:
+      context: ./examples/api4/
+      dockerfile: ./Dockerfile
+    ports:
+      - '3334:3334'
+    volumes:
+      - ./examples/api4:/usr/src/app/
+    networks:
+      - testapp
+
+  api5:
+    container_name: api5
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+    build:
+      context: ./examples/api5/
+      dockerfile: ./Dockerfile
+    ports:
+      - '3335:3335'
+    volumes:
+      - ./examples/api5:/usr/src/app/
+    networks:
+      - testapp
+
+
+
+
+networks:
+  testapp:

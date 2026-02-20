@@ -1,3 +1,24 @@
+# Como configurar
+
+![](./public/a.png)
+
+E
+
+![A Configuração deve ser $.status com um contains success](./public/a.png)
+
+
+Depos crie uma página de status
+
+![](./public/c.png)
+
+
+e
+
+![](./public/d.png)
+
+
+-------
+
 <div align="center" width="100%">
     <img src="./public/icon.svg" width="128" alt="Uptime Kuma Logo" />
 </div>
